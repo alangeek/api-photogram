@@ -1,4 +1,4 @@
-export type standardReplyMsg = {
+export type StandardReplyMsg = {
   msg?: string,
   erro?: string
 }

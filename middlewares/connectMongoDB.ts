@@ -1,10 +1,10 @@
 import type { NextApiRequest, NextApiResponse, NextApiHandler } from 'next'
-import type { standardReplyMsg } from '../types/standardReplyMsg'
+import type { StandardReplyMsg } from '../types/StandardReplyMsg'
 
 import mongoose from 'mongoose'
 
 export const connectMongoDB = (handler: NextApiHandler) =>
-  async (req: NextApiRequest, res: NextApiResponse<standardReplyMsg>) => {
+  async (req: NextApiRequest, res: NextApiResponse<StandardReplyMsg>) => {
 
     //  verirficar se o banco ja esta conectado, se estiver seguir para o próximo endpoint ou próximo middleware
     if (mongoose.connections[0].readyState) {
